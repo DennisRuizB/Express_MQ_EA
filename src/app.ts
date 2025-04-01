@@ -3,6 +3,7 @@ import { startConnection } from "./database";
 import { setupSwagger } from "./swagger";
 import userRoutes from "./routes/user.routes";
 import productsRoutes from "./routes/product.routes";
+import commentRoutes from "./routes/comment.routes";
 import companyRoutes from "./routes/company.routes";
 import pedidosRoutes from "./routes/order.routes";
 import adminRoutes from "./routes/admin.routes";
@@ -28,6 +29,7 @@ app.use("/api/products", productsRoutes);
 app.use("/api/company", companyRoutes);
 app.use("/api/orders", pedidosRoutes);
 app.use("/api/admins", adminRoutes);
+app.use("/api/comments",commentRoutes);
 
 app.use(routeNotFound);//Middleware para informar de una ruta inexistente fuera de /users , /products ,etc.
 
